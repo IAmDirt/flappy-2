@@ -10,6 +10,8 @@ public class Bird : MonoBehaviour {
 	private Rigidbody2D rb2d; 
 	private Animator anim;
 
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +21,8 @@ public class Bird : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+//		transform.position = Vector3.SmoothDamp(transform.position, new Vector3(player.position.x, transform.position.y, player.position.z), ref smoothVelocity, smoothTime);
 		//Flap-mekanikk
 		if (isDead == false) 
 		{
@@ -36,12 +40,14 @@ public class Bird : MonoBehaviour {
 	//sjekker om hovedobjektet (bird) har kollidert med annet objekt
 	void OnCollisionEnter2D ()
 	{
-		rb2d.velocity = Vector2.zero; 
-		isDead = true; 	
-		anim.SetTrigger ("Die"); 
-		GameControl.instance.BirdDied (); 
+		if (GetComponent<Collider>().gameObject.name == "enemy")
+		
+			rb2d.velocity = Vector2.zero; 
+			isDead = true; 	
+			anim.SetTrigger ("Die"); 
+			GameControl.instance.BirdDied (); 
 
-		SoundManagerScript.PlaySound ("birdHit");
+			SoundManagerScript.PlaySound ("birdHit");
 	}
 }
 
