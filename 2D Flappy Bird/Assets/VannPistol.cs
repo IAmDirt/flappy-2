@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerShooting : MonoBehaviour {
+public class VannPistol : MonoBehaviour {
 
 	public Vector3 bulletOffset = new Vector3(0, 0.5f, 0);
 
