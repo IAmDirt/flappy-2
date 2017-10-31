@@ -6,14 +6,14 @@ public class ColumnPool : MonoBehaviour {
 
 	public int columnPoolSize = 5;
 	public GameObject columnsPrefab;
-	public float spawnRate = 4f;
-	public float columnMin = -1f;
+	public float spawnRate = 4.0f;
+	public float columnMin = -1.0f;
 	public float columnMax = 3.5f;
 
 	private GameObject[] columns;
-	private Vector2 objectPoolPosition = new Vector2 (-15f, -25f);
+	private Vector2 objectPoolPosition = new Vector2 (-33f, -25f);
 	private float timeSinceLastSpawned; 
-	private float spawnXposition = 10f;
+	private float spawnXposition = 34f;
 	private int currentColumn = 0;
 
 

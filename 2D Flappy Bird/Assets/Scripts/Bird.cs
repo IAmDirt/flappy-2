@@ -38,7 +38,7 @@ public class Bird : MonoBehaviour {
 	}
 
 	//sjekker om hovedobjektet (bird) har kollidert med annet objekt
-	void OnCollisionEnter2D ()
+/*	void OnCollisionEnter2D ()
 	{
 		if (GetComponent<Collider>().gameObject.name == "enemy")
 		
@@ -49,6 +49,7 @@ public class Bird : MonoBehaviour {
 
 			SoundManagerScript.PlaySound ("birdHit");
 	}
+	*/
 }
 
 
