@@ -23,7 +23,7 @@ public class VannPistol : MonoBehaviour {
 			// SHOOT!
 			cooldownTimer = fireDelay;
 
-			Vector3 offset = transform.rotation * bulletOffset;
+			Vector3 offset = transform.rotation * bulletOffset ;
 
 			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
 			bulletGO.layer = bulletLayer;

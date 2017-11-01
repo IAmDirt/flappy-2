@@ -12,7 +12,7 @@ public class GameControl : MonoBehaviour {
 	public bool gameOver = false; 
 	public float scrollSpeed = -4f;
 
-	private int score = 0;
+	public static int scoreAll = 0;
 
 	// Use this for initialization
 
@@ -42,8 +42,8 @@ public class GameControl : MonoBehaviour {
 		{
 			return;
 		}
-		score++; 
-		scoreText.text = "Score: " + score.ToString (); 
+		scoreAll++; 
+		scoreText.text = "Score: " + scoreAll.ToString (); 
 	}
 
 	public void BirdDied()
