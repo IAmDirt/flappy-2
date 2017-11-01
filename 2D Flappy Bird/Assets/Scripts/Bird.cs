@@ -37,10 +37,24 @@ public class Bird : MonoBehaviour {
 		}
 	}
 
+
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		if (coll.gameObject.tag == "lava") 
+		{
+			Debug.Log ("fugl død");
+
+			rb2d.velocity = Vector2.zero; 
+			isDead = true; 	
+			anim.SetTrigger ("Die"); 
+			GameControl.instance.BirdDied (); 
+
+		}
+
 	//sjekker om hovedobjektet (bird) har kollidert med annet objekt
 /*	void OnCollisionEnter2D ()
 	{
-		if (GetComponent<Collider>().gameObject.name == "enemy")
+		if (GetComponent<Collider>().gameObject.name == "lava")
 		
 			rb2d.velocity = Vector2.zero; 
 			isDead = true; 	
@@ -50,6 +64,8 @@ public class Bird : MonoBehaviour {
 			SoundManagerScript.PlaySound ("birdHit");
 	}
 	*/
+
+}
 }
 
 
