@@ -43,7 +43,7 @@ public class GameControl : MonoBehaviour {
 			return;
 		}
 		scoreAll++; 
-		scoreText.text = "Score: " + scoreAll.ToString (); 
+		scoreText.text = "Score " + scoreAll.ToString (); 
 	}
 
 	public void BirdDied()

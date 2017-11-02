@@ -9,15 +9,17 @@ public class EnemyScoreScript : MonoBehaviour {
 	void Update()
 	{
 		score = GameControl.scoreAll;
+		score++;
 	}
 
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "droplet") 
+
+		if (coll.gameObject.tag == "target") 
 		{
-			Debug.Log ("fugl død");
-			score++;
+			Debug.Log ("truffet");
+			GameControl.instance.BirdScored ();
 			Destroy(gameObject);
 		}
 }
