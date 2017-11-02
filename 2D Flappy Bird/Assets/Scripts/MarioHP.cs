@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PackManHP : MonoBehaviour {
+public class MarioHP : MonoBehaviour {
 	private Animator anim;
 
-	private float PackManLiv = 3;
+	private float MarioLiv = 6;
 
 	// Use this for initialization
 	void Start () {
 
 
 		anim = GetComponent<Animator> ();
-	
+
 	}
 
 	// Update is called once per frame
@@ -23,7 +23,7 @@ public class PackManHP : MonoBehaviour {
 	}
 	IEnumerator vent()
 	{
-		yield return new WaitForSeconds (0.7f);
+		yield return new WaitForSeconds (0.2f);
 
 		Destroy(gameObject);
 	}
@@ -32,16 +32,16 @@ public class PackManHP : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "droplet") 
 		{
-			Debug.Log ("dø pack man");
-			PackManLiv--;
+			Debug.Log ("dø mario");
+			MarioLiv--;
 
-			if (PackManLiv < 1) 
+			if (MarioLiv < 1) 
 			{
 				anim.SetTrigger ("PacManDie 0");
 				StartCoroutine (vent ());
 			}
 
 		}
-}
+	}
 
 }
