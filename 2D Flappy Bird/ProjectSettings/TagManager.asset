@@ -7,7 +7,6 @@ TagManager:
   - lava
   - droplet
   - target
-  - platform
   layers:
   - Default
   - TransparentFX
