@@ -22,7 +22,7 @@ public class ColumnPool : MonoBehaviour {
 //	private float SetRandomRange;
 
 
-	// Use this for initialization
+	// Use this for initialization3
 	void Start () 
 	{
 //		SetRandomRange = Random.Range (columnMin, columnMax); 
