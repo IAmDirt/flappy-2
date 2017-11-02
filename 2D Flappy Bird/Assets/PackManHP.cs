@@ -3,30 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PackManHP : MonoBehaviour {
+	private Animator anim;
 
-	private float PackManLiv = 1;
+	private float PackManLiv = 3;
 
 	// Use this for initialization
 	void Start () {
-		
+
+
+		anim = GetComponent<Animator> ();
+	
 	}
-/*
+
 	// Update is called once per frame
 	void Update () {
 
-		this.transform.GetComponent(anim
 
+
+	}
+	IEnumerator vent()
+	{
+		yield return new WaitForSeconds (1);
+
+		Destroy(gameObject);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "lava") 
+		if (coll.gameObject.tag == "droplet") 
 		{
+			Debug.Log ("dø pack man");
+			PackManLiv--;
 
-			animation.Play ("PacManDie");
-			GameControl.instance.BirdDied (); 
+			if (PackManLiv < 1) 
+			{
+				anim.SetTrigger ("PacManDie 0");
+				StartCoroutine (vent ());
+			}
 
 		}
 }
-			*/
+
 }
