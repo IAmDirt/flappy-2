@@ -48,7 +48,10 @@ public class Bird : MonoBehaviour {
 			isDead = true; 	
 			anim.SetTrigger ("Die"); 
 			GameControl.instance.BirdDied (); 
-
+		}
+		if (coll.gameObject.tag == "target") 
+		{
+			GameControl.instance.BirdDied (); 
 		}
 
 	//sjekker om hovedobjektet (bird) har kollidert med annet objekt
