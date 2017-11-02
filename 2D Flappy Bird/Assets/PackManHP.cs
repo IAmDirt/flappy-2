@@ -23,7 +23,7 @@ public class PackManHP : MonoBehaviour {
 	}
 	IEnumerator vent()
 	{
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (0.7f);
 
 		Destroy(gameObject);
 	}
