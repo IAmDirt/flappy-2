@@ -5,7 +5,7 @@ using UnityEngine;
 public class PackManHP : MonoBehaviour {
 	private Animator anim;
 
-	private float PackManLiv = 3;
+	private float PackManLiv = 2;
 
 	// Use this for initialization
 	void Start () {
