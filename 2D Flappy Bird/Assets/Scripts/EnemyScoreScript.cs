@@ -15,7 +15,10 @@ public class EnemyScoreScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-
+		if (coll.gameObject.tag == "platform")
+		{
+			Destroy(gameObject);		
+		}
 		if (coll.gameObject.tag == "target") 
 		{
 			Debug.Log ("truffet");

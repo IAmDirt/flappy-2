@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColumnPool : MonoBehaviour {
 
 	public int columnPoolSize;
-	public GameObject prefab1, prefab2, prefab3;
+	public GameObject prefab1, prefab2, prefab3, prefab4;
 	public float spawnRate = 4.0f;
 	public float columnMin = -1.0f;
 	public float columnMax = 3.5f;
@@ -56,6 +56,9 @@ public class ColumnPool : MonoBehaviour {
 				break;
 			case 3:
 				Instantiate (prefab3, new Vector2 (spawnXposition, spawnYPosition), Quaternion.identity);
+				break;
+			case 4:
+				Instantiate (prefab4, new Vector2 (spawnXposition, spawnYPosition), Quaternion.identity);
 				break;
 			}
 
