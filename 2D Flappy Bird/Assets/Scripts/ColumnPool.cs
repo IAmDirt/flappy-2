@@ -42,7 +42,7 @@ public class ColumnPool : MonoBehaviour {
 		if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate) 
 		{
 			timeSinceLastSpawned = 0;
-			whatToSpawn = Random.Range (1, 4);
+			whatToSpawn = Random.Range (1, 5);
 			float spawnYPosition = Random.Range (columnMin, columnMax); 
 	//		columns [currentColumn].transform.position = new Vector2 (spawnXposition, spawnYPosition); 
 			currentColumn++;
